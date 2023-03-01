@@ -3,7 +3,7 @@
 этого числа*/
 void SecondDelete(int num)
 {
-    if (num<1000 & num>=100)
+    if ((num<1000 & num>=100)||(num> -1000 & num <= -100))
         {
             Console.WriteLine(num/100*10+num%10);
         }
