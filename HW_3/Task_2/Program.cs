@@ -2,7 +2,7 @@
 и находит расстояние между ними в 3D пространстве.*/
 double Dist(double x1, double y1, double z1, double x2, double y2, double z2, int k)
 {
-    return  Math.Round(Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2)+Math.Pow(z2-z2,2)),k);
+    return  Math.Round(Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2)+Math.Pow(z2-z1,2)),k);
 }
 Console.WriteLine("enter the coordinates of the first point");
 int a1 = int.Parse(Console.ReadLine()!);
