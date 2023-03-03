@@ -8,7 +8,7 @@ void ThirdNumber(int num)
     else 
      {
         int i=1;
-        while((num>1000*i)||(num < -1000*i))
+        while((num>=1000*i)||(num <= -1000*i))
         {
             i=i*10;
         }

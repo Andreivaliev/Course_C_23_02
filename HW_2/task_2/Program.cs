@@ -11,5 +11,4 @@ void SecondDelete(int num)
         Console.WriteLine("invalid value");
 }
 Console.WriteLine("enter a three-digit number");
-int a = int.Parse(Console.ReadLine()!);
-SecondDelete(a);
+SecondDelete(int.Parse(Console.ReadLine()!));
