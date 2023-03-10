@@ -11,17 +11,27 @@ void Print (double[] arr)
     Console.WriteLine();
 }
 
-double [] mass(int length, int bottom, int top)
+double [] mass(int length, double bottom, double top)
 {
     double[] arr = new double[length];
     int c = 0;
+    double r=Math.Abs(top-bottom);
     for (int i = 0; i < length; i++ )
     {
-        c = new Random().Next(0,2);
-        if(c==0)
-             arr[i]=  new Random().NextDouble()*bottom;
+        if(bottom>0)
+            {
+                 arr[i]= new Random().NextDouble()*r+bottom;
+            }
+             
         else
-             arr[i]=  new Random().NextDouble()*top;
+           {
+            c = new Random().Next(0,2);
+            if (c==0)
+                arr[i] = new Random().NextDouble()*top;
+            else
+                arr[i] = new Random().NextDouble()*bottom;
+           }
+
     }
     return arr;
 }
@@ -43,12 +53,14 @@ double Diff(double[] arr)
 Console.WriteLine("enter the number of array elements");
 int lenght1 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("enter the initial range");
-int bottom1 = int.Parse(Console.ReadLine()!);
+double bottom1 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("enter the end range");
-int top1 = int.Parse(Console.ReadLine()!);
+double top1 = int.Parse(Console.ReadLine()!);
+
 
 double [] mas = mass(lenght1,bottom1,top1);
 Console.WriteLine("array");
 Print(mas);
 double result = Diff(mas);
 Console.WriteLine($"answer: {result}");
+
