@@ -11,15 +11,6 @@ void Print (double[] arr)
     Console.WriteLine();
 }
 
-void Print(double[] arr)
-{
-    int size=arr.Length;
-    for (int i = 0; i < size; i++)
-    {
-        Console.Write($"{arr[i]} ");
-    }
-    Console.WriteLine();
-}
 
 double [] mass(int length, double bottom, double top)
 {
