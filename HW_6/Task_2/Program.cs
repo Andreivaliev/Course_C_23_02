@@ -16,8 +16,10 @@ void Point(int b1, int k1, int b2, int k2 )
     }
     else
         {
-            x=(b1-b2)/(k2-k1);
+            x=(double)(b1-b2)/(k2-k1);
+            x=Math.Round(x,3);
             y=k1*x+b1;
+            y=Math.Round(y,3);
             Console.WriteLine(x);
             Console.WriteLine(y);
         }
