@@ -11,6 +11,7 @@ void Print (double[] arr)
     Console.WriteLine();
 }
 
+
 double [] mass(int length, double bottom, double top)
 {
     double[] arr = new double[length];
@@ -18,13 +19,13 @@ double [] mass(int length, double bottom, double top)
     double r=Math.Abs(top-bottom);
     for (int i = 0; i < length; i++ )
     {
-        if(bottom>0)
+         if(bottom>0)
             {
                  arr[i]= new Random().NextDouble()*r+bottom;
             }
-             
+
         else
-           {
+          {
             c = new Random().Next(0,2);
             if (c==0)
                 arr[i] = new Random().NextDouble()*top;
