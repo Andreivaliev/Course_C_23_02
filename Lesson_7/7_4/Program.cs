@@ -26,7 +26,7 @@ int[,] MassNums(int row, int column, int from, int to )
     }   
     return arr;
 } 
-void  Search(int[,] mass, int a)
+string  Search(int[,] mass, int a)
 {
     
     int row = mass.GetLength(0);
@@ -38,22 +38,23 @@ void  Search(int[,] mass, int a)
         {
             if (a==mass[i,j])
             {
-               Console.WriteLine($" {i} , {j} ") ;
-               return;
+               return $"[ {i+1} , {j+1} ]" ;
             }
         }
     }
+    return "No";
 }
 int row_num = int.Parse(Console.ReadLine()!);
 int column_num = int.Parse(Console.ReadLine()!);
 int start = int.Parse(Console.ReadLine()!);
 int stop = int.Parse(Console.ReadLine()!);
 Console.WriteLine("enter a number");
-int a = int.Parse(Console.ReadLine()!);
+
 
 int[,] mass_1 = MassNums(row_num,column_num,start,stop);
 Print(mass_1);
 Console.WriteLine();
-
-Search(mass_1,a);
+int a = int.Parse(Console.ReadLine()!);
+string result = Search(mass_1,a);
+Console.WriteLine(result);
 
